@@ -99,6 +99,147 @@ export const SectionBannerCheckListItem = styled.div`
    }
 `;
 
-export const SectionBannerImageWrapper = styled.div`
+export const SectionCoffeeListWrapper = styled.div`
+   width: 100vw;
+   padding: 2rem 10rem;
 
+   h3 {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      line-height: 130%;
+      color: ${props => props.theme["base-subtitle"]};
+      margin-bottom: 3.375rem;
+   }
 `;
+
+export const SectionCoffeeList = styled.div`
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2rem;
+`;
+
+export const SectionCoffeeListItem = styled.div`
+   width: 16rem;
+   height: 19.375rem;
+   padding: 0 1.5rem 1.25rem;
+   background: ${props => props.theme["base-card"]};
+   border-radius: 6px 36px;
+
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   img {
+      width: 7.5rem;
+      height: 7.5rem;
+      margin-top: -1.25rem;
+      margin-bottom: 0.75rem;
+   }
+
+   > span {
+      padding: 0.25rem 0.5rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+
+      background: ${props => props.theme["yellow-light"]};
+      color: ${props => props.theme["yellow"]};
+
+      font-weight: 700;
+      font-size: 0.625rem;
+      line-height: 130%;
+
+      display: flex;
+      align-items: center;
+   }
+`;
+
+export const CoffeeInfo = styled.div`
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+`;
+
+export const CoffeeInfoTitle = styled.p`
+   font-family: 'Baloo 2', sans-serif;
+   font-weight: 700;
+   font-size: 1.25rem;
+   line-height: 130%;
+   color: ${props => props.theme["base-subtitle"]};
+   margin-bottom: 0.5rem;
+`;
+
+export const CoffeeInfoDescription = styled.p`
+   font-size: 0.875rem;
+   line-height: 130%;
+   color: ${props => props.theme["base-label"]};
+   margin-bottom: 2.0625rem;
+   text-align: center;
+`;
+
+export const PurchaseCoffee = styled.div`
+width: 100%;
+   display: flex;
+   align-items: center;
+
+   > div:first-child {
+      display: flex;
+      align-items: baseline;
+      margin-right: 1.4375rem;
+
+      small {
+         font-size: 0.875rem;
+         margin-right: 0.25rem;
+         line-height: 130%;
+         color: ${props => props.theme["base-text"]};
+      }
+
+      p {
+         font-family: 'Baloo 2';
+         font-weight: 800;
+         font-size: 1.5rem;
+         line-height: 130%;
+         color: ${props => props.theme["base-text"]};
+      }
+   }
+
+   > div:nth-child(2) {
+      width: 4.5rem;
+      border-radius: 6px;
+      background: ${props => props.theme["base-button"]};
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      div {
+         svg {
+            color: ${props => props.theme["purple"]};
+         }
+      }
+
+      p {
+         line-height: 130%;
+         color: ${props => props.theme["base-title"]};
+         text-align: center;
+      }
+   }
+
+   > div:last-child {
+      padding: 0.5rem;
+      background: ${props => props.theme["purple-dark"]};
+      border-radius: 6px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+         color: ${props => props.theme["base-card"]}
+      }
+   }
+`;
+
