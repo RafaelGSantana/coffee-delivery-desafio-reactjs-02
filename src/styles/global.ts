@@ -5,7 +5,12 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-   } 
+   }
+
+   :focus {
+      outline: 0;
+      box-shadow: 0 0 0 0 ${(props) => props.theme["white"]};
+   }
 
    body {
       background: ${props => props.theme.background};
@@ -16,5 +21,9 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
       font-size: 1rem;
+   }
+
+   button {
+      cursor: pointer;
    }
 `;
