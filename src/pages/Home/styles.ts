@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
    width: 100%;
+   padding-bottom: 9.8125rem;
 `;
 
 export const SectionBanner = styled.div`
-   width: 100vw;
+   width: 100%;
    height: 34rem;
    background-image: url('/src/assets/section-home-background.svg');
    background-size: cover;
@@ -100,7 +101,7 @@ export const SectionBannerCheckListItem = styled.div`
 `;
 
 export const SectionCoffeeListWrapper = styled.div`
-   width: 100vw;
+   width: 100%;
    padding: 2rem 10rem;
 
    h3 {
