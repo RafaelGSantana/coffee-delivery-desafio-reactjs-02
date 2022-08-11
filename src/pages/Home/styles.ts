@@ -229,17 +229,24 @@ width: 100%;
       }
    }
 
-   > div:last-child {
+   > button:last-child {
       padding: 0.5rem;
       background: ${props => props.theme["purple-dark"]};
       border-radius: 6px;
+      border: none;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
+      transition: background 0.2s;
+
       svg {
          color: ${props => props.theme["base-card"]}
+      }
+
+      &:hover {
+         background: ${props => props.theme["purple"]};
       }
    }
 `;

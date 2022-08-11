@@ -7,11 +7,6 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
    }
 
-   :focus {
-      outline: 0;
-      box-shadow: 0 0 0 0 ${(props) => props.theme["white"]};
-   }
-
    body {
       background: ${props => props.theme.background};
       -webkit-font-smoothing: antialiased;

@@ -86,9 +86,9 @@ export function Home() {
                         </div>
                      </div>
                      
-                     <div>
+                     <button>
                         <ShoppingCart size={22} weight="fill"/>
-                     </div>
+                     </button>
                   </PurchaseCoffee>
                </SectionCoffeeListItem>
 
@@ -116,9 +116,9 @@ export function Home() {
                         </div>
                      </div>
                      
-                     <div>
+                     <button>
                         <ShoppingCart size={22} weight="fill"/>
-                     </div>
+                     </button>
                   </PurchaseCoffee>
                </SectionCoffeeListItem>
 
@@ -146,9 +146,9 @@ export function Home() {
                         </div>
                      </div>
                      
-                     <div>
+                     <button>
                         <ShoppingCart size={22} weight="fill"/>
-                     </div>
+                     </button>
                   </PurchaseCoffee>
                </SectionCoffeeListItem>
 
@@ -176,9 +176,9 @@ export function Home() {
                         </div>
                      </div>
                      
-                     <div>
+                     <button>
                         <ShoppingCart size={22} weight="fill"/>
-                     </div>
+                     </button>
                   </PurchaseCoffee>
                </SectionCoffeeListItem>
 
@@ -206,11 +206,42 @@ export function Home() {
                         </div>
                      </div>
                      
-                     <div>
+                     <button>
                         <ShoppingCart size={22} weight="fill"/>
-                     </div>
+                     </button>
                   </PurchaseCoffee>
                </SectionCoffeeListItem>
+
+               <SectionCoffeeListItem>
+                  <img src={imageCoffee} alt="" />
+                  <span>TRADICIONAL</span>
+                  <CoffeeInfo>
+                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
+                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
+                  </CoffeeInfo>
+
+                  <PurchaseCoffee>
+                     <div>
+                        <small>R$</small>
+                        <p>9,90</p>
+                     </div>
+
+                     <div>
+                        <div>
+                           <Minus size={14} weight="bold" />
+                        </div>
+                        <p>1</p>
+                        <div>
+                           <Plus size={14} weight="bold" />
+                        </div>
+                     </div>
+                     
+                     <button>
+                        <ShoppingCart size={22} weight="fill"/>
+                     </button>
+                  </PurchaseCoffee>
+               </SectionCoffeeListItem>
+
             </SectionCoffeeList>
          </SectionCoffeeListWrapper>
       </HomeContainer>

@@ -25,6 +25,11 @@ import {
    SelectAmountOfSelectedCoffee,
    RemoveSelectedCoffeeButton,
    SelectedCoffeePrice,
+   TotalPurchaseInfo,
+   TotalItemsPrice,
+   DeliveryPrice,
+   TotalPurchasePrice,
+   ConfirmPurchaseButton
 } from './styles';
 
 export function Cart() {
@@ -68,18 +73,18 @@ export function Cart() {
                </PaymentInfoDescription>
 
                <PaymentOptions>
-                  <div>
+                  <button>
                      <CreditCard size={16} />
                      <p>CARTÃO DE CRÉDITO</p>
-                  </div>
-                  <div>
+                  </button>
+                  <button>
                      <Bank size={16} />
                      <p>CARTÃO DE DÉBITO</p>
-                  </div>
-                  <div>
+                  </button>
+                  <button>
                      <Money size={16} />
                      <p>DINHEIRO</p>
-                  </div>
+                  </button>
                </PaymentOptions>
             </PaymentInfoFormWrapper>
             
@@ -154,6 +159,26 @@ export function Cart() {
                      <span>R$ 9,90</span>
                   </SelectedCoffeePrice>
                </SelectedCoffeeInfo>
+
+               <TotalPurchaseInfo>
+                  <TotalItemsPrice>
+                     <p>Total de itens</p>
+                     <span>R$ 29,70</span>
+                  </TotalItemsPrice>
+                  <DeliveryPrice>
+                     <p>Entrega</p>
+                     <span>R$ 3,50</span>
+                  </DeliveryPrice>
+                  <TotalPurchasePrice>
+                     <p>Total</p>
+                     <span>R$ 33,20</span>
+                  </TotalPurchasePrice>
+
+                  <ConfirmPurchaseButton>
+                     CONFIRMAR PEDIDO
+                  </ConfirmPurchaseButton>
+               </TotalPurchaseInfo>
+
             </CartSelectedCoffees>
 
             

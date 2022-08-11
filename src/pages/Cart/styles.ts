@@ -5,6 +5,7 @@ export const CartContainer = styled.div`
    padding: 2.5rem 10rem;
 
    display: flex;
+   justify-content: space-between;
    gap: 2rem;
 `;
 
@@ -77,6 +78,11 @@ const BaseInput = styled.input`
    background: ${props => props.theme["base-input"]};
    border: 1px solid ${props => props.theme["base-button"]};
    border-radius: 4px;
+   outline: none;
+
+   &:focus {
+      border: 1px solid ${props => props.theme["yellow-dark"]};
+   }
 `;
 
 export const CepInput = styled(BaseInput)`
@@ -146,7 +152,7 @@ export const PaymentOptions = styled.div`
    align-items: center;
    gap: 0.75rem;
 
-   div {
+   button {
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -154,6 +160,9 @@ export const PaymentOptions = styled.div`
       width: 11.166rem;
       background: ${props => props.theme["base-button"]};
       border-radius: 6px;
+      border: none;
+
+      transition: background 0.2s;
 
       svg {
          color: ${props => props.theme["purple"]};
@@ -164,6 +173,10 @@ export const PaymentOptions = styled.div`
          line-height: 130%;
          text-transform: capitalize;
          color: ${props => props.theme["base-text"]};
+      }
+
+      &:hover {
+         background: ${props => props.theme["base-hover"]};
       }
    }
 `;
@@ -298,5 +311,99 @@ export const SelectedCoffeePrice = styled.div`
       font-weight: 700;
       line-height: 130%;
       color: ${props => props.theme["base-text"]};
+   }
+`;
+
+export const TotalPurchaseInfo = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+
+   width: 100%;
+`;
+
+export const TotalItemsPrice = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   width: 100%;
+   margin-bottom: 0.75rem;
+
+   p {
+      font-size: 0.875rem;
+      color: ${props => props.theme["base-text"]};
+      line-height: 130%;
+   }
+
+   span {
+      font-size: 1rem;
+      color: ${props => props.theme["base-text"]};
+      line-height: 130%;
+   }
+`;
+
+export const DeliveryPrice = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   width: 100%;
+   margin-bottom: 0.75rem;
+
+   p {
+      font-size: 0.875rem;
+      color: ${props => props.theme["base-text"]};
+      line-height: 130%;
+   }
+
+   span {
+      font-size: 1rem;
+      color: ${props => props.theme["base-text"]};
+      line-height: 130%;
+   }
+`;
+
+export const TotalPurchasePrice = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   width: 100%;
+   margin-bottom: 1.5rem;
+
+   p {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: ${props => props.theme["base-subtitle"]};
+      line-height: 130%;
+   }
+
+   span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: ${props => props.theme["base-subtitle"]};
+      line-height: 130%;
+   }
+`;
+
+export const ConfirmPurchaseButton = styled.button`
+   width: 100%;
+   height: 2.875rem;
+   border: none;
+   border-radius: 6px;
+   padding: 0.75rem 0.5rem;
+   background: ${props => props.theme["yellow"]};
+
+   font-weight: 700;
+   font-size: 0.875rem;
+   color: ${props => props.theme["white"]};
+   line-height: 130%;
+
+   transition: background 0.2s;
+
+   &:hover {
+      background: ${props => props.theme["yellow-dark"]};
    }
 `;
