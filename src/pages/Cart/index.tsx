@@ -74,16 +74,22 @@ export function Cart() {
 
                <PaymentOptions>
                   <button>
-                     <CreditCard size={16} />
-                     <p>CARTÃO DE CRÉDITO</p>
+                     <div>
+                        <CreditCard size={16} />
+                     </div>
+                     <p>Cartão de crédito</p>
                   </button>
                   <button>
-                     <Bank size={16} />
-                     <p>CARTÃO DE DÉBITO</p>
+                     <div>
+                        <Bank size={16} />
+                     </div>
+                     <p>Cartão de débito</p>
                   </button>
                   <button>
-                     <Money size={16} />
-                     <p>DINHEIRO</p>
+                     <div>
+                        <Money size={16} />
+                     </div>
+                        <p>dinheiro</p>
                   </button>
                </PaymentOptions>
             </PaymentInfoFormWrapper>
@@ -105,13 +111,13 @@ export function Cart() {
                         <p>Expresso Tradicional</p>
                         <div>
                            <SelectAmountOfSelectedCoffee>
-                              <div>
+                              <button>
                                  <Minus size={14} weight="bold" />
-                              </div>
+                              </button>
                               <p>1</p>
-                              <div>
+                              <button>
                                  <Plus size={14} weight="bold" />
-                              </div>
+                              </button>
                            </SelectAmountOfSelectedCoffee>
 
                            <RemoveSelectedCoffeeButton>
@@ -138,13 +144,13 @@ export function Cart() {
                         <p>Expresso Tradicional</p>
                         <div>
                            <SelectAmountOfSelectedCoffee>
-                              <div>
+                              <button>
                                  <Minus size={14} weight="bold" />
-                              </div>
+                              </button>
                               <p>1</p>
-                              <div>
+                              <button>
                                  <Plus size={14} weight="bold" />
-                              </div>
+                              </button>
                            </SelectAmountOfSelectedCoffee>
 
                            <RemoveSelectedCoffeeButton>

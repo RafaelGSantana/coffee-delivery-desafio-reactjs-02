@@ -80,6 +80,16 @@ const BaseInput = styled.input`
    border-radius: 4px;
    outline: none;
 
+   font-size: 0.875rem;
+   line-height: 130%;
+   color: ${props => props.theme["base-text"]};
+
+   &::placeholder {
+      font-size: 0.875rem;
+      line-height: 130%;
+      color: ${props => props.theme["base-label"]};
+   }
+
    &:focus {
       border: 1px solid ${props => props.theme["yellow-dark"]};
    }
@@ -150,6 +160,7 @@ export const PaymentInfoDescription = styled.div`
 export const PaymentOptions = styled.div`
    display: flex;
    align-items: center;
+   justify-content: center;
    gap: 0.75rem;
 
    button {
@@ -164,21 +175,27 @@ export const PaymentOptions = styled.div`
 
       transition: background 0.2s;
 
-      svg {
-         color: ${props => props.theme["purple"]};
+      div {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         svg {
+            color: ${props => props.theme["purple"]};
+         }
       }
 
-      p {
-         font-size: 0.75rem;
-         line-height: 130%;
-         text-transform: capitalize;
-         color: ${props => props.theme["base-text"]};
+         p {
+            font-size: 0.75rem;
+            line-height: 160%;
+            text-transform: uppercase;
+            color: ${props => props.theme["base-text"]};
+         }
       }
-
+      
       &:hover {
          background: ${props => props.theme["base-hover"]};
       }
-   }
 `;
 
 export const CartSelectedCoffeesWrapper = styled.div`
@@ -259,9 +276,23 @@ export const SelectAmountOfSelectedCoffee = styled.div`
    background: ${props => props.theme["base-button"]};
    border-radius: 6px;
 
-   > div {
+   > button {
+      border: none;
+      transition: color 0.2s;
+      background: transparent;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       svg {
          color: ${props => props.theme["purple"]};
+      }
+
+      &:hover {
+         svg {
+            color: ${props => props.theme["purple-dark"]};
+         }
       }
    }
 
@@ -290,7 +321,7 @@ export const RemoveSelectedCoffeeButton = styled.button`
    p {
       font-size: 0.75rem;
       color: ${props => props.theme["base-text"]};;
-      line-height: 130%;
+      line-height: 160%;
    }
 
    &:hover {
