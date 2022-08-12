@@ -1,7 +1,9 @@
 import { Coffee, Minus, Package, Plus, ShoppingCart, Timer } from "phosphor-react";
 
 import imageBanner from '../../assets/section-home-image-banner.svg';
-import imageCoffee from '../../assets/img-coffee.svg';
+import {
+   listOfCoffes
+} from '../../utils/list-coffees.js';
 
 import {
    HomeContainer,
@@ -19,6 +21,10 @@ import {
 } from './styles';
 
 export function Home() {
+   
+
+   console.log(listOfCoffes);
+
    return (
       <HomeContainer>
          <SectionBanner>
@@ -62,185 +68,45 @@ export function Home() {
          <SectionCoffeeListWrapper>
             <h3>Nossos cafés</h3>
             <SectionCoffeeList>
-               <SectionCoffeeListItem>
-                  <img src={imageCoffee} alt="" />
-                  <span>TRADICIONAL</span>
-                  <CoffeeInfo>
-                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
-                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
-                  </CoffeeInfo>
 
-                  <PurchaseCoffee>
-                     <div>
-                        <small>R$</small>
-                        <p>9,90</p>
-                     </div>
-
-                     <div>
+               {
+                  listOfCoffes.map(item => (
+                     <SectionCoffeeListItem id={item.id}>
+                        <img src={item.image} alt="" />
                         <div>
-                           <Minus size={14} weight="bold" />
+                           {
+                              item.categories.map(category => <span>{category}</span>)
+                           }
                         </div>
-                        <p>1</p>
-                        <div>
-                           <Plus size={14} weight="bold" />
-                        </div>
-                     </div>
-                     
-                     <button>
-                        <ShoppingCart size={22} weight="fill"/>
-                     </button>
-                  </PurchaseCoffee>
-               </SectionCoffeeListItem>
+                        <CoffeeInfo>
+                           <CoffeeInfoTitle>{item.name}</CoffeeInfoTitle>
+                           <CoffeeInfoDescription>{item.description}</CoffeeInfoDescription>
+                        </CoffeeInfo>
 
-               <SectionCoffeeListItem>
-                  <img src={imageCoffee} alt="" />
-                  <span>TRADICIONAL</span>
-                  <CoffeeInfo>
-                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
-                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
-                  </CoffeeInfo>
+                        <PurchaseCoffee>
+                           <div>
+                              <small>R$</small>
+                              <p>{item.price}</p>
+                           </div>
 
-                  <PurchaseCoffee>
-                     <div>
-                        <small>R$</small>
-                        <p>9,90</p>
-                     </div>
-
-                     <div>
-                        <div>
-                           <Minus size={14} weight="bold" />
-                        </div>
-                        <p>1</p>
-                        <div>
-                           <Plus size={14} weight="bold" />
-                        </div>
-                     </div>
-                     
-                     <button>
-                        <ShoppingCart size={22} weight="fill"/>
-                     </button>
-                  </PurchaseCoffee>
-               </SectionCoffeeListItem>
-
-               <SectionCoffeeListItem>
-                  <img src={imageCoffee} alt="" />
-                  <span>TRADICIONAL</span>
-                  <CoffeeInfo>
-                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
-                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
-                  </CoffeeInfo>
-
-                  <PurchaseCoffee>
-                     <div>
-                        <small>R$</small>
-                        <p>9,90</p>
-                     </div>
-
-                     <div>
-                        <div>
-                           <Minus size={14} weight="bold" />
-                        </div>
-                        <p>1</p>
-                        <div>
-                           <Plus size={14} weight="bold" />
-                        </div>
-                     </div>
-                     
-                     <button>
-                        <ShoppingCart size={22} weight="fill"/>
-                     </button>
-                  </PurchaseCoffee>
-               </SectionCoffeeListItem>
-
-               <SectionCoffeeListItem>
-                  <img src={imageCoffee} alt="" />
-                  <span>TRADICIONAL</span>
-                  <CoffeeInfo>
-                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
-                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
-                  </CoffeeInfo>
-
-                  <PurchaseCoffee>
-                     <div>
-                        <small>R$</small>
-                        <p>9,90</p>
-                     </div>
-
-                     <div>
-                        <div>
-                           <Minus size={14} weight="bold" />
-                        </div>
-                        <p>1</p>
-                        <div>
-                           <Plus size={14} weight="bold" />
-                        </div>
-                     </div>
-                     
-                     <button>
-                        <ShoppingCart size={22} weight="fill"/>
-                     </button>
-                  </PurchaseCoffee>
-               </SectionCoffeeListItem>
-
-               <SectionCoffeeListItem>
-                  <img src={imageCoffee} alt="" />
-                  <span>TRADICIONAL</span>
-                  <CoffeeInfo>
-                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
-                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
-                  </CoffeeInfo>
-
-                  <PurchaseCoffee>
-                     <div>
-                        <small>R$</small>
-                        <p>9,90</p>
-                     </div>
-
-                     <div>
-                        <div>
-                           <Minus size={14} weight="bold" />
-                        </div>
-                        <p>1</p>
-                        <div>
-                           <Plus size={14} weight="bold" />
-                        </div>
-                     </div>
-                     
-                     <button>
-                        <ShoppingCart size={22} weight="fill"/>
-                     </button>
-                  </PurchaseCoffee>
-               </SectionCoffeeListItem>
-
-               <SectionCoffeeListItem>
-                  <img src={imageCoffee} alt="" />
-                  <span>TRADICIONAL</span>
-                  <CoffeeInfo>
-                     <CoffeeInfoTitle>Expresso Tradicional</CoffeeInfoTitle>
-                     <CoffeeInfoDescription>O tradicional café feito com água quente e grãos moídos</CoffeeInfoDescription>
-                  </CoffeeInfo>
-
-                  <PurchaseCoffee>
-                     <div>
-                        <small>R$</small>
-                        <p>9,90</p>
-                     </div>
-
-                     <div>
-                        <div>
-                           <Minus size={14} weight="bold" />
-                        </div>
-                        <p>1</p>
-                        <div>
-                           <Plus size={14} weight="bold" />
-                        </div>
-                     </div>
-                     
-                     <button>
-                        <ShoppingCart size={22} weight="fill"/>
-                     </button>
-                  </PurchaseCoffee>
-               </SectionCoffeeListItem>
+                           <div>
+                              <div>
+                                 <Minus size={14} weight="bold" />
+                              </div>
+                              <p>1</p>
+                              <div>
+                                 <Plus size={14} weight="bold" />
+                              </div>
+                           </div>
+                           
+                           <button>
+                              <ShoppingCart size={22} weight="fill"/>
+                           </button>
+                        </PurchaseCoffee>
+                     </SectionCoffeeListItem>
+                  ))
+               }
+               
 
             </SectionCoffeeList>
          </SectionCoffeeListWrapper>

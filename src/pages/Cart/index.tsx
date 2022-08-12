@@ -1,6 +1,6 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Minus, Money, Plus, Trash } from "phosphor-react";
 
-import imageCoffee from '../../assets/img-coffee.svg';
+import imageCoffee from '../../assets/image-coffees/expresso-tradicional.svg';
 
 import {
    CartContainer,
@@ -103,7 +103,7 @@ export function Cart() {
                <SelectedCoffeeInfo>
                   <div>
                      <img
-                        src={imageCoffee}
+                        src="/src/assets/image-coffees/expresso-tradicional.svg"
                         alt="Foto tirada de cima, de uma chícara branca com café preto, em cima de um pirex branco"
                      />
 
@@ -136,7 +136,7 @@ export function Cart() {
                <SelectedCoffeeInfo>
                   <div>
                      <img
-                        src={imageCoffee}
+                        src="/src/assets/image-coffees/expresso-tradicional.svg"
                         alt="Foto tirada de cima, de uma chícara branca com café preto, em cima de um pirex branco"
                      />
 

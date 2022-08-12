@@ -122,7 +122,6 @@ export const SectionCoffeeList = styled.div`
 
 export const SectionCoffeeListItem = styled.div`
    width: 16rem;
-   height: 19.375rem;
    padding: 0 1.5rem 1.25rem;
    background: ${props => props.theme["base-card"]};
    border-radius: 6px 36px;
@@ -138,20 +137,23 @@ export const SectionCoffeeListItem = styled.div`
       margin-bottom: 0.75rem;
    }
 
-   > span {
-      padding: 0.25rem 0.5rem;
-      border-radius: 100px;
-      margin-bottom: 1rem;
-
-      background: ${props => props.theme["yellow-light"]};
-      color: ${props => props.theme["yellow"]};
-
-      font-weight: 700;
-      font-size: 0.625rem;
-      line-height: 130%;
-
+   > div {
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+
+      > span {
+         color: ${props => props.theme["yellow"]};
+         font-weight: 700;
+         font-size: 0.625rem;
+         line-height: 130%;
+         background: ${props => props.theme["yellow-light"]};
+         padding: 0.25rem 0.5rem;
+         border-radius: 100px;
+         margin-bottom: 1rem;
+      }
    }
 `;
 
@@ -179,7 +181,7 @@ export const CoffeeInfoDescription = styled.p`
 `;
 
 export const PurchaseCoffee = styled.div`
-width: 100%;
+   width: 100%;
    display: flex;
    align-items: center;
 
