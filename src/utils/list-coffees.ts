@@ -1,4 +1,4 @@
-export const listOfCoffes = [
+export const listOfCoffees = [
    {
       id: 1,
       name: 'Expresso Tradicional',

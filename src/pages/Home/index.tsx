@@ -2,8 +2,8 @@ import { Coffee, Minus, Package, Plus, ShoppingCart, Timer } from "phosphor-reac
 
 import imageBanner from '../../assets/section-home-image-banner.svg';
 import {
-   listOfCoffes
-} from '../../utils/list-coffees.js';
+   listOfCoffees
+} from '../../utils/list-coffees';
 
 import {
    HomeContainer,
@@ -21,10 +21,6 @@ import {
 } from './styles';
 
 export function Home() {
-   
-
-   console.log(listOfCoffes);
-
    return (
       <HomeContainer>
          <SectionBanner>
@@ -70,8 +66,8 @@ export function Home() {
             <SectionCoffeeList>
 
                {
-                  listOfCoffes.map(item => (
-                     <SectionCoffeeListItem id={item.id}>
+                  listOfCoffees.map(item => (
+                     <SectionCoffeeListItem key={item.id}>
                         <img src={item.image} alt="" />
                         <div>
                            {
@@ -86,7 +82,7 @@ export function Home() {
                         <PurchaseCoffee>
                            <div>
                               <small>R$</small>
-                              <p>{item.price}</p>
+                              <p>{item.price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</p>
                            </div>
 
                            <div>
@@ -106,8 +102,6 @@ export function Home() {
                      </SectionCoffeeListItem>
                   ))
                }
-               
-
             </SectionCoffeeList>
          </SectionCoffeeListWrapper>
       </HomeContainer>

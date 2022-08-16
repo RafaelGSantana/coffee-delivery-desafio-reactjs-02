@@ -117,7 +117,8 @@ export const SectionCoffeeListWrapper = styled.div`
 export const SectionCoffeeList = styled.div`
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   gap: 2rem;
+   column-gap: 2rem;
+   row-gap: 2.5rem;
 `;
 
 export const SectionCoffeeListItem = styled.div`
